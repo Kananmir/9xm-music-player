@@ -1,0 +1,34 @@
+audio1:
+    title: "ISHQ WALA LOVE"
+    artist: "NEETI MOHAN, SALIM MERCHANT, SHEKHAR RAVJIANI"
+    album: "STUDENT OF THE YEAR"
+
+audio2:
+    title: "TU HAI KI NAHI"
+    artist: "ANKIT TIWARI"
+    album: "ROY"
+
+audio3:
+    title: "IS THIS LOVE"
+    artist: "MOHIT CHAUHAN, SHREYA GHOSHAL"
+    album: "KISMAT KONNECTION"
+
+audio4:
+    title: "LAAPATA"
+    artist: "KK, PALAK MUCHHAL"
+    album: "EK THA TIGER"
+
+audio5:
+    title: "TU JAANE NA (REPRISE)"
+    artist: "SOHAM CHAKRABORTY"
+    album: "AJAB PREM KI GHAZAB KAHANI"
+
+audio6:
+    title: "KYA MUJHE PYAAR HAI"
+    artist: "KK"
+    album: "WOH LAMHE..."
+
+audio7:
+    title: "BHEEGI SI BHAAGI SI"
+    artist: "MOHIT CHAUHAN, ANTARA MITRA"
+    album: "RAAJNEETI"

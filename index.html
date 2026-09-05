@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9XM Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Stage Section -->
+  <div id="stage">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- Center Screen / pixel night visual -->
+    <div class="screen-content" aria-hidden="true">
+      <video autoplay loop muted playsinline id="bg-video">
+        <source src="assets/backgrounds/background1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Top Left About Button -->
+    <button type="button" class="mail-btn" id="mail-btn" aria-label="About the Creator">
+      <img src="assets/about_the_creator.svg" height="75px" alt="About the Creator"> 
+    </button>
+
+    <!-- Top Right 9XM Logo -->
+    <div class="logo-9xm" aria-label="9XM">
+      <img src="assets/9xm_logo.svg" height="175px" alt="9XM Logo">
+    </div>
+    
+    <!-- Bade Chote Animation Overlay (Canvas with real-time green/white chroma-key) -->
+    <div id="bade-chote-container" class="bade-chote-hidden">
+      <canvas id="bade-chote-canvas" width="600" height="600"></canvas>
+      <video id="bade-chote-video" muted playsinline preload="auto" style="display:none;">
+        <source src="assets/chote_animation.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Stacked Song Info Bar + Play / Pause Controls -->
+    <div class="player-dock">
+      <!-- Sunflower Mood Background Switcher Button -->
+      <button id="mood-btn" class="mood-btn" type="button" aria-label="Change Mood Background" title="Change Mood Background">
+        <img src="assets/sunflower_mood_switcher.png" alt="Mood Switcher">
+      </button>
+
+      <div class="song-card">
+        <div class="stripe yellow">
+          <span id="track-title">SONG NAME</span>
+        </div>
+        <div class="stripe cyan">
+          <span id="track-artist">SONG ARTIST</span>
+        </div>
+        <div class="stripe pink">
+          <span id="track-album">MOVIE/ALBUM NAME</span>
+        </div>
+      </div>
+
+      <div id="controls">
+        <button id="play-btn" class="control-btn play" type="button" aria-label="Play / Pause">
+          <img src="assets/play.svg" class="icon-play" alt="Play">
+          <img src="assets/pause.svg" class="icon-pause hidden" alt="Pause">
+        </button>
+        <button id="next-btn" class="control-btn next" type="button" aria-label="Next">►►</button>
+        <button id="prev-btn" class="control-btn prev" type="button" aria-label="Previous">◄◄</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Marquee Ticker -->
+  <div id="marquee-wrap">
+    <div class="marquee-content">
+      <span>>>> IF THE MUSIC SOUNDS TOO LOUD, YOU'RE PROBABLY GETTING OLD >>></span>
+      <span>>>> MY STEREO WAS ACTING UP SO I GAVE IT A TRY... NOW IT'S A SOUND DECISION >>></span>
+      <span>*** WHY DID THE MUSIC TEACHER GET LOCKED OUT? HER KEYS WERE INSIDE (I KNOW YOU LAUGHED) ***</span>
+      <span>>>> WHAT KIND OF MUSIC DO AVOCADOS LISTEN TO? GUAC 'N' ROLL >>></span>
+      <span>>>> 100% FREE OF CORPORATE MINIMALISM AND GREY DASHBOARDS >>></span>
+      <span>>>> ERROR 404: SPOTIFY RECOMMENDATIONS NOT FOUND. ONLY VIBES HERE >>></span>
+      <span>*** IF THIS SONG SLAPS IT WAS WRITTEN BY A GENIUS. IF IT SUCKS IT WAS A JAVASCRIPT BUG ***</span>
+      <span>>>> DIAL *99# TO SEE IF KANAN IS CODING >>></span>
+    </div>
+  </div>
+
+  <!-- Audio Element (Controlled by JS) -->
+  <audio id="audio-player" src="audio/audio1.mp3" preload="auto"></audio>
+
+  <!-- About Creator Modal Dialog -->
+  <div id="about-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialogue">&times;</button>
+      <div id="modal-content-area" class="modal-content-area"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
