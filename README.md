@@ -49,7 +49,7 @@ No build step or external package installation is required! The project runs ent
 ### Local Development / Running
 1. Clone or download the repository to your local machine.
 2. Open `index.html` in any modern web browser (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge).
-3. Alternatively, serve using any local static HTTP server (e.g. VS Code Live Server or `npx serve`).
+3. Alternatively, serve using any local static HTTP server (e.g. VS Code Live Server).
 
 ---
 
